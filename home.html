@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Personal Portfolio">
+    <title>Michael Allen's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+
+</head>
+
+
+<body>
+<div class="topnav">
+    <a class="active">Michael Allen's Protfolio</a>
+</div>
+<header>
+    <h1>Welcome</h1>
+    <h2>My name is Michael Allen and welcome to <br>
+    my personal portfolio website! I am a college <br>
+    student with the goal of becoming a front-end designer.</h2>
+</header>
+<div id="intro">
+
+
+
+
+<h2>Prior experience with: </h2>
+<div class="flex-container">
+    <div class="flex-item">
+        <img src="Images/vue.jpg" alt="Vue">
+    </div>
+    <div class="flex-item">
+        <img src="Images/node.png" alt="nodeJS">
+    </div>
+    <div class="flex-item">
+        <img src="Images/HTMLcss.png" alt="HTML and CSS">
+    </div>
+</div>
+</div>
+
+<div>
+    <img src="Images/scrolld.png" alt="Scroll Down" class="center">
+</div>
+
+<div class="Background" style="background-color: #2b2b2b">
+    <div class="background" style="background-color: #2b2b2b">
+    <h1 style="text-align: center; color: white">Background</h1>
+    <img src="Images/mike.jpg" alt="Michael Allen" class="mike" >
+    <h2 style="text-align: left; color: white"> I have experience in various areas of work <br>
+    allowing for better understanding, cooperation skills <br>
+    as well as communication skills.</h2>
+        <div style="text-align: left; color: white; font-size: 20px">
+        Areas of work:
+        <ul>
+            <li>Resturant/Food Industry</li>
+            <li>Construction</li>
+            <li>Pool Attendant/Lifeguard</li>
+            <li>Office Secretary</li>
+            <li>Political Campaign Field Coordinator</li>
+        </ul>
+        Skills:
+        <ul>
+            <li>Microsoft Word, PowerPoint, and Excel Certified</li>
+            <li>Proficient in JavaScript, HTML, and CSS</li>
+            <li>Currently learning Vue and NodeJS</li>
+
+        </ul>
+        </div>
+    </div>
+    <button class="tabs">Community Activities</button>
+        <div class="pane">
+            <img src="Images/church.jpg" alt="Community" height="auto" width="auto">
+            <ul>
+                <li>All Saints Catholic Church - Greeter/Usher		     2014 - 2019</li>
+                <li>Red Cross Blood Drive Volunteer			     2018 - 2019</li>
+                <li>Alzheimer's Walk 					     2019</li>
+            </ul>
+        </div>
+    <button class="tabs">Education</button>
+        <div class="pane">
+
+            <img src="Images/uncc.jpg" alt="Educaton" height="auto" width="auto">
+            <h2>The University of North Carolina at Charlotte 	                   Exp. Graduation: May 2023</h2>
+            <ul>
+                <li>Degree:  Bachelor of Arts in Human-Computer Interaction with a minor in history</li>
+                <li>Relevant Coursework and Projects: Computers and Their impact on society,<br>
+                    Data Structures and Logic Algorithms, Interactive Systems Design and Implementation,<br>
+                    Web-Based Application Design and Development
+                </li>
+            </ul>
+        </div>
+    <button class="tabs">Hobbies</button>
+        <div class="pane">
+            <img src="Images/frontend.jpg" alt="Hobbies" height="auto" width="auto">
+            <ul>
+                <li>Intramural soccer</li>
+                <li>Golf</li>
+                <li>Front-end Design</li>
+                <li>Gaming</li>
+                <li>Working out at the gym</li>
+            </ul>
+        </div>
+
+</div>
+</body>
+<footer> © Michael Allen 2021</footer>
+
+</html>
+<script>
+    var acc = document.getElementsByClassName("tabs");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+<style>
+
+    .topnav {
+        background-color: #333;
+        overflow: hidden;
+    }
+
+
+    .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .topnav a.active {
+        background-color: green;
+        color: white;
+    }
+    h1{
+        font-size: 50px;
+        text-align: center;
+
+    }
+    h2{
+        font-size: 25px;
+        text-align: center
+    }
+    p{
+        font-size: 25px;
+        text-align: center;
+        margin: 20px;
+        padding: 20px;
+    }
+    body{
+        margin: 0;
+        background-color: #787878;
+
+    }
+    .flex-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 20px;
+
+
+    }
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .mike {
+        display: block;
+        width: 15%;
+        height: 15%;
+
+    }
+    footer{
+        text-align: center;
+    }
+    .background{
+        margin: 30px;
+    }
+
+    .tabs {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 50%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;;
+    }
+
+    .active, .tabs:hover {
+        background-color: #ccc;
+    }
+
+    .pane {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        width: 50%;
+    }
+</style>
